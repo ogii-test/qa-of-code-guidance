@@ -16,15 +16,24 @@ html:
   extra_footer: "<p>Best Practice & Impact division, Office for National Statistics</p><p>This document is very young, please help use to make it grow by providing any feedback by <a href='mailto:gsshelp@statistics.gov.uk'>email</a> or via the <a href='https://github.com/best-practice-and-impact/qa-of-code-guidance'>GitHub repository</a>."
   extra_navbar: "<p>Book version 2021.9</p><a href='https://www.gov.uk/government/organisations/government-analysis-function' target='_blank'><img src='./_static/af_logo.png' alt='The Government Analysis Function logo' style='width:50%;'></a>"
 
+#sphinx:
+#  extra_extensions:
+#    - sphinx_tabs.tabs
+#    - sphinx.ext.todo
+#  config:
+#    todo_include_todos: true
+#    language: en
+#    html_show_copyright: false
 sphinx:
   extra_extensions:
-    - sphinx_tabs.tabs
-    - sphinx.ext.todo
+  - 'sphinx.ext.autodoc'
+  - 'sphinx.ext.autosummary'
+  - 'sphinx.ext.napoleon'
   config:
-    todo_include_todos: true
-    language: en
-    html_show_copyright: false
-
+    autosummary_generate: True
+    add_module_names: False
+    templates_path: [_templates]
+    
 latex:
   latex_documents:
     targetname: book.tex
