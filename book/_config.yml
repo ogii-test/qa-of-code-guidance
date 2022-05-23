@@ -38,6 +38,7 @@ sphinx:
     autosummary_generate: True
     add_module_names: False
     templates_path: [_templates]
+    linkcheck_timeout: 10
     
 latex:
   latex_documents:
