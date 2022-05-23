@@ -20,9 +20,9 @@ jobs:
       - run:
           name: Build docs
           command: |
-            	jupyter-book clean -a docs
-              # jupyter-book build docs/source --path-output docs
-              jupyter-book build docs/source --path-output docs --builder linkcheck
+              jupyter-book clean -a book
+              # jupyter-book build book
+              jupyter-book build book --builder linkcheck
 
 workflows:
   main:
