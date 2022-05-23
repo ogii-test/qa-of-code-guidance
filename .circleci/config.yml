@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Build docs
           command: |
-              jupyter-book clean -a book
+             # jupyter-book clean -a book
               # jupyter-book build book
               jupyter-book build book --builder linkcheck -W -n -vvv --keep-going --path-output docs
 
