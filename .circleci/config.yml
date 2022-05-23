@@ -13,7 +13,6 @@ jobs:
           name: Install dependencies
           command: |
             pip install -r requirements.txt
-            pip install -e .
       - save_cache:
           paths:
             - /home/circleci/.cache/pip/
@@ -22,8 +21,8 @@ jobs:
           name: Build docs
           command: |
             	jupyter-book clean -a docs
-	            jupyter-book build docs/source --path-output docs
-	            jupyter-book build docs/source --path-output docs --builder linkcheck
+              # jupyter-book build docs/source --path-output docs
+              jupyter-book build docs/source --path-output docs --builder linkcheck
 
 workflows:
   main:
