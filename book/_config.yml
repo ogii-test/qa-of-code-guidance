@@ -18,6 +18,9 @@ html:
 
 execute:
   stderr_output: show
+  timeout: 10
+  allow_errors: true
+  
 #sphinx:
 #  extra_extensions:
 #    - sphinx_tabs.tabs
